@@ -1,0 +1,17 @@
+{
+  "name": "taguchi-optimizer",
+  "version": "1.0.0",
+  "description": "Taguchi Method Parameter Optimization Tool",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["taguchi", "optimization", "orthogonal-arrays"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
+

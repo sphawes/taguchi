@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taguchi Method Optimizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Taguchi Method Parameter Optimizer</h1>
+            <p class="subtitle">Optimize your process parameters using orthogonal arrays</p>
+        </header>
+
+        <div id="setupSection" class="section">
+            <h2>Step 1: Define Parameters</h2>
+            
+            <div class="level-toggle">
+                <label class="toggle-label">Design Type:</label>
+                <div class="radio-group">
+                    <label class="radio-option">
+                        <input type="radio" name="levelType" value="2" checked>
+                        <span>2-Level (Low, High)</span>
+                    </label>
+                    <label class="radio-option">
+                        <input type="radio" name="levelType" value="3">
+                        <span>3-Level (Low, Middle, High)</span>
+                    </label>
+                </div>
+            </div>
+            
+            <p id="parameterInstructions">Enter up to 5 parameters you want to test with their low and high values:</p>
+            
+            <div id="parametersContainer"></div>
+            
+            <button id="addParameterBtn" class="btn btn-secondary">+ Add Parameter</button>
+            <button id="generateArrayBtn" class="btn btn-primary">Generate Experiment Plan</button>
+        </div>
+
+        <div id="arraySection" class="section hidden">
+            <h2>Step 2: Orthogonal Array</h2>
+            <p>Based on your parameters, here's the orthogonal array structure:</p>
+            <div id="arrayDisplay"></div>
+        </div>
+
+        <div id="experimentsSection" class="section hidden">
+            <h2>Step 3: Perform Experiments</h2>
+            <p>Run each experiment with the specified settings and record your success metric:</p>
+            <div id="experimentsContainer"></div>
+            <button id="processResultsBtn" class="btn btn-primary">Process Results</button>
+        </div>
+
+        <div id="resultsSection" class="section hidden">
+            <h2>Step 4: Results</h2>
+            <div id="resultsDisplay"></div>
+            <button id="resetBtn" class="btn btn-secondary">Start New Experiment</button>
+        </div>
+    </div>
+
+    <script src="taguchi.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+
